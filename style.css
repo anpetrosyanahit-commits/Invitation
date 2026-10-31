@@ -1,0 +1,94 @@
+/* General Reset & Typography */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #FDFBF7; /* Soft cream background */
+    line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/couple-photo.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Darkens photo so text is readable */
+}
+.hero-content { position: relative; z-index: 2; padding: 20px; }
+.subtitle { font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+.names { font-size: 5rem; margin: 20px 0; }
+.names span { font-style: italic; color: #D4AF37; /* Gold accent */ }
+.invite-text { font-size: 1.1rem; margin-bottom: 30px; font-weight: 300; }
+.date-box {
+    display: inline-block; border: 1px solid rgba(255,255,255,0.7);
+    padding: 15px 30px; background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);
+}
+.day { display: block; font-size: 1.5rem; letter-spacing: 2px; }
+.full-date { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-top: 5px; }
+
+/* Countdown */
+.countdown-section { padding: 80px 20px; text-align: center; background: #F4EFE6; }
+.section-title { font-size: 2.5rem; margin-bottom: 40px; color: #2C3E50; }
+.countdown-timer { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.time-box {
+    background: white; padding: 20px; border-radius: 10px; width: 100px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.time-box span { font-size: 2.5rem; font-weight: 600; color: #B76E79; /* Rose gold */ display: block; }
+.time-box p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666; }
+
+/* Details */
+.details-section { padding: 80px 20px; display: flex; justify-content: center; }
+.detail-card {
+    background: white; max-width: 500px; width: 100%; padding: 40px; text-align: center;
+    border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.detail-img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+.detail-card h3 { font-size: 2rem; margin-bottom: 15px; color: #2C3E50; }
+.detail-card p { margin-bottom: 5px; color: #555; }
+.btn {
+    display: inline-block; margin-top: 20px; padding: 10px 25px;
+    background: #2C3E50; color: white; text-decoration: none; border-radius: 25px;
+    transition: 0.3s;
+}
+.btn:hover { background: #B76E79; }
+
+/* Footer */
+footer { text-align: center; padding: 40px; background: #2C3E50; color: white; font-style: italic; }
+
+/* Floating Music Button */
+#musicToggle {
+    position: fixed; bottom: 30px; right: 30px; z-index: 100;
+    width: 60px; height: 60px; border-radius: 50%; border: none;
+    background: #D4AF37; color: white; font-size: 1.5rem; cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s;
+}
+#musicToggle:hover { transform: scale(1.1); }
+#musicToggle.playing { animation: pulse 2s infinite; }
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .names { font-size: 3rem; }
+    .time-box { width: 70px; padding: 15px; }
+    .time-box span { font-size: 1.8rem; }
+}
