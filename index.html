@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation - John & Jane</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <!-- Floating Music Button -->
+    <button id="musicToggle" title="Play Music">🎵</button>
+    <audio id="bgMusic" loop>
+        <source src="images/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content fade-in">
+            <p class="subtitle">Together with their families</p>
+            <h1 class="names">John <span>&</span> Jane</h1>
+            <p class="invite-text">Request the honor of your presence at their wedding</p>
+            <div class="date-box">
+                <span class="day">Saturday</span>
+                <span class="full-date">October 31, 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <h2 class="section-title">Counting Down To Forever</h2>
+        <div id="countdown" class="countdown-timer">
+            <div class="time-box"><span id="days">00</span><p>Days</p></div>
+            <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+            <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
+            <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="details-section">
+        <div class="detail-card fade-in">
+            <img src="images/venue-photo.jpg" alt="Venue" class="detail-img">
+            <h3>The Ceremony</h3>
+            <p>4:00 PM</p>
+            <p>The Grand Garden Estate</p>
+            <p>123 Floral Avenue, City</p>
+            <a href="https://maps.google.com" target="_blank" class="btn">View Map</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>We can't wait to celebrate with you!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
